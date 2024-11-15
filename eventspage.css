@@ -1,0 +1,104 @@
+*{
+    font-family: "Fjalla One", sans-serif;
+
+}
+.event-title {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 130px;
+  }
+  
+  .left-arrow {
+    width: 30px; /* Adjust size of the arrow as needed */
+    margin-right: 20px; /* Space between arrow and heading */
+  }
+  
+  .event-title-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .event-title-text h1 {
+    margin: 0;
+    font-size: 24px; /* Adjust heading size */
+  }
+  
+  .date {
+    font-size: 14px; /* Adjust date size */
+    color: gray; 
+    margin-top: 8px;
+  }
+  .event-image{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  .event-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .main-body {
+    padding: 20px; 
+    font-size: 20px;
+  }
+  
+  .main-body > div {
+    margin-bottom: 20px; /* Adds margin between each div inside main-body */
+  }
+  .description {
+    padding: 0 20px; 
+    line-height: 1.5; /* Improves readability */
+    color: #333; 
+  }
+  
+  .description .title {
+    font-weight: bold; 
+    margin-left: 10px; 
+    margin-bottom: 10px; 
+    font-size: 26px;
+  }
+  
+  
+  .description .subtitle {
+    text-decoration: underline; /* Underline the "Time and Place" subtitle */
+    margin-top: 20px; 
+    margin-bottom: 5px; /* Slightly less space below subtitle */
+  }
+  
+  .description .location
+  {  
+      margin-top: 20px; 
+  }
+  .Event-highlights {
+    padding: 0 20px; /* Adds a small margin from the left and right sides */
+    line-height: 1.5;
+    color: #333; 
+  }
+  .Event-highlights .title {
+    font-weight: bold; 
+    margin-left: 10px; 
+    margin-bottom: 10px; 
+    font-size: 26px;
+  }
+  .Event-highlights .subtitle {
+    text-decoration: underline; 
+    margin-top: 20px; /* Space above subtitle */
+    margin-bottom: 5px;
+  }
+  .Tickets {
+    padding: 0 20px; /* Adds a small margin from the left and right sides */
+    line-height: 1.5; 
+    color: #333; 
+  }
+  .Tickets .title {
+    font-weight: bold; 
+    margin-left: 10px; 
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  .ticket-description{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }

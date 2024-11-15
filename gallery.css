@@ -1,0 +1,81 @@
+/* Container for gallery */
+*{
+  font-family: "Fjalla One", sans-serif;
+
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px; /* Space from navbar */
+  }
+  
+  .gallery-images {
+  position: relative;
+  width: 100%; 
+}
+
+.gallery-images img {
+  width: 100%; /* Stretch the image to fill the container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Position the arrow and button inside the image */
+.image-with-arrow {
+  position: absolute;
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center; 
+  background-color: white;
+  border-radius: 12px;
+  border: 4px solid white;
+ 
+}
+
+.image-with-arrow img {
+  width: 30px;
+  height: auto;
+}
+.image-with-arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 10px; 
+  transform: translateY(-50%); 
+  display: flex;
+  align-items: center; 
+  background-color: white;
+  border-radius: 12px;
+  border: 4px solid white;
+ 
+}
+
+.image-with-arrow-left img {
+  width: 30px; /* Set the size of the arrow image */
+  height: auto;
+}
+  
+  .gallery-description {
+    margin-top: 40px;
+    max-width: 800px;
+    font-size: 36px;
+    text-align: center;
+  }
+  .title{
+    margin-top: 60px;
+    font-size: 40px;
+    align-self: flex-start;
+    margin-left: 120px;
+    max-width: 800px;
+    text-align: center;
+  }
+  .about-description{
+    font-size: 28px;
+    margin-top: 14px;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 93px;
+
+  }

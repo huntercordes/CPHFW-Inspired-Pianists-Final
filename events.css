@@ -1,0 +1,87 @@
+h2 {
+  font-family: "Fjalla One", sans-serif;
+
+  font-size: 20px;
+    text-align: center;
+  }
+  
+.box {
+  display: flex;
+  height: 210px; 
+  width: 100%;
+margin-bottom: 20px;   
+margin-top: 60px; 
+ background-color: rgba(168, 187, 165);
+
+} 
+.box2{
+    display: flex;
+    height: 210px; 
+    width: 100%;
+margin-bottom: 20px;   
+ background-color: rgb(212, 217, 212);
+ margin-top: 60px;
+}
+
+.img-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  border-radius: 12px;
+flex-basis: 60%; 
+ background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+}
+.box-text {
+    padding: 10px;
+    flex: 1; 
+flex-basis: 20%;  
+  padding-left: 40px;
+  }
+  .box-text h2 {
+    font-size: 26px;
+  }
+  
+  .box-text p {
+    font-size: 12px;
+  }
+  
+  .content{
+      padding-top: 80px;
+      margin-top: 40px;
+  }
+  h2{
+    margin-top: 20px;
+      text-align: center; /* Center the heading text */
+      margin-bottom: 20px;
+      color: #0b0b0b;
+  }
+  .content p {
+    font-size: 22px;
+  }
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    margin-top: 10px;
+    flex-basis: 10%;
+  }
+  .date h2 {
+    margin: 6px;
+    font-size: 18px;
+  }
+  
+  .arrow-logo {
+    width: 40px; 
+    margin-top: 100px; /* Space between date and arrow */
+  }
+  #dinner-img{
+    background-image: url(eventsimages/dinner.png);
+  }
+  #runway-img{
+    background-image: url(eventsimages/runway.png);
+  }
+  #pinkstage-img{
+    background-image: url(eventsimages/pinkstage.png);
+  }

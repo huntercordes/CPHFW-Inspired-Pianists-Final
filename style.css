@@ -1,0 +1,101 @@
+/* Header */
+body{
+    font-family: "Fjalla One", sans-serif;
+}
+
+
+/* Hero Section */
+
+.hero {
+    
+  padding-top: 120px; /* Offset by header and navbar height */
+    
+}
+
+
+.hero h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero p {
+    margin-top: 50px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-left: 10px;
+    text-align: left;
+}
+.hero .para2{
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+.headline {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 3em; /* Adjust font size as needed */
+    line-height: 1.1; /* Adjust line height for better spacing */
+}
+
+.float-image {
+    float: right; 
+    margin-left: 10px; /* Space between text and image */
+    width: 500px; 
+    height: auto;
+    border-radius: 10px; 
+}
+
+
+.headline::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* Interactive Section */
+.interactive {
+    text-align: center;
+    padding: 20px;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 40px;
+    height: auto;
+    display: block;
+    object-position: center;
+    object-fit: cover; /* Ensures the video fills the container */
+}
+
+
+.interactive p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: white;
+    color: black;
+    border:  solid 6px #A8BBA5;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.marquee img{
+    width: 100px;
+    height: 70px;
+    margin: 10px;
+}
+
+@media (max-width: 1024px) {
+    .hero-content img{
+        margin-left: 30px;
+    }
+}

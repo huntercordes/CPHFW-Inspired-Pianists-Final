@@ -1,0 +1,128 @@
+:root {
+    --navbar-link-hover-color: #10884a; /* Hover color for navbar links */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .fjalla-one-regular {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .header-section {
+    position: fixed;
+    font-family: "Fjalla One", sans-serif;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    height: 70px;
+    box-sizing: border-box;
+  }
+ 
+  
+  .logo-img img {
+    max-width: 100%; /* image scales within the 80% space */
+    height: auto;
+  }
+
+.language-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  flex: 1; /* Takes up the remaining 20% */
+  margin-left: 0;
+}
+.language-selector {
+  font-size: 22px;
+}
+  
+  /* Subheader styling */
+  .subheader {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    flex-wrap: flex;
+    justify-content: center;
+    background-color: rgba(168, 187, 165);
+    padding: 10px 20px;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 1.2em;
+    font-family: "Fjalla One", sans-serif;
+}
+.toggle-button {
+  display: none; /* Hide toggle button by default (only show on mobile) */
+  cursor: pointer;
+}
+
+/* Styling for each bar in the toggle button */
+.bar {
+  display: block;
+  width: 25px; 
+  height: 3px; 
+  margin: 5px 0; 
+  background-color: rgb(10, 10, 10);
+  transition: 0.3s; 
+}
+
+/* Navbar links styling */
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+}
+
+.navbar-links a {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Mobile view: hide navbar links and show toggle button */
+@media (max-width: 768px) {
+  
+  .navbar-links {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(168, 187, 165, 0.9);
+    position: absolute;
+    top: 50px; 
+    left: 0;
+  }
+
+  .navbar-links.active {
+    display: flex; 
+  }
+  .navbar-links ul {
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  .toggle-button {
+    display: block; 
+  }
+  
+}
+
+  /*end navbar css */

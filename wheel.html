@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the wheel</title>
+    <link rel="stylesheet" href="wheel.css">
+    <!-- Confetti Script CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+            <div class="wheel" id="wheel1">
+                <div class="number" style="--i:1; --clr:#A8BBA5"><span>1</span></div>
+                <div class="number" style="--i:2; --clr:#D9D9D9"><span>2</span></div>
+                <div class="number" style="--i:3; --clr:#A8BBA5"><span>3</span></div>
+                <div class="number" style="--i:4; --clr:#D9D9D9"><span>4</span></div>
+                <div class="number" style="--i:5; --clr:#A8BBA5"><span>5</span></div>
+                <div class="number" style="--i:6; --clr:#D9D9D9"><span>6</span></div>
+                <div class="number" style="--i:7; --clr:#A8BBA5"><span>7</span></div>
+                <div class="number" style="--i:8; --clr:#D9D9D9"><span>8</span></div>
+                <div class="number" style="--i:9; --clr:#A8BBA5"><span>9</span></div>
+                <div class="number" style="--i:10; --clr:#D9D9D9"><span>10</span></div>
+            </div>
+            <div class="homeBtn" id="homeBtn" style="display: none;">Home</div> <!-- Home Button -->
+            <!-- Popup Overlay -->
+        <div class="popup-overlay" id="popupOverlay" style="display: none;">
+            <div class="popup-message">
+                <p>Congratulations, you won!</p>
+            </div>
+        </div>
+        </div>
+    
+        <script>
+            let wheel = document.querySelector('.wheel');
+            let spinBtn = document.querySelector('.spinBtn');
+            let homeBtn = document.getElementById('homeBtn'); // Reference to the Home button
+            let popupOverlay = document.getElementById('popupOverlay'); // Reference to the popup
+            let value = Math.ceil(Math.random() * 3600);
+    
+            spinBtn.onclick = function(){
+                wheel.style.transform = "rotate(" + value + "deg)";
+                value += Math.ceil(Math.random() * 3600);
+    
+                // Hide the Home button initially, then show it after the spin completes
+                homeBtn.style.display = "none";
+                popupOverlay.style.display = "none"; // Hide popup at start of spin
+    
+                setTimeout(() => {
+                    popupOverlay.style.display = "flex"; // Show popup after spin
+                    homeBtn.style.display = "block";     // Show Home button after popup
+                    launchConfetti();                    // Trigger confetti effect
+                }, 5000); 
+            }
+    
+            // Close the popup when clicking outside the message
+            popupOverlay.onclick = function(event) {
+                if (event.target === popupOverlay) { // Only close if clicking outside the message
+                    popupOverlay.style.display = "none";
+                }
+            }
+    
+            // Redirect to the homepage when the Home button is clicked
+            homeBtn.onclick = function() {
+                window.location.href = 'index.html'; // Change 'index.html' to the URL of your homepage
+            }
+    
+            // Confetti effect function
+            function launchConfetti() {
+                const duration = 2 * 1000; // Confetti duration in milliseconds
+                const end = Date.now() + duration;
+    
+                // Function to randomly generate confetti particles
+                (function frame() {
+                    // Launch confetti from random positions with different colors
+                    confetti({
+                        particleCount: 5,
+                        angle: 60,
+                        spread: 55,
+                        origin: { x: Math.random(), y: Math.random() - 0.2 },
+                        colors: ['#bb0000', '#ffffff', '#00bb00', '#0000bb'],
+                    });
+                    if (Date.now() < end) {
+                        requestAnimationFrame(frame);
+                    }
+                })();
+            }
+        </script>
+</body>
+</html>
